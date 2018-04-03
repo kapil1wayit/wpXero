@@ -1,0 +1,5 @@
+{
+    "require": {
+        "picqer/exact-php-client": "^3.6"
+    }
+}

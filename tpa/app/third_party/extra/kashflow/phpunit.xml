@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="tests/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="true"
+         syntaxCheck="false"
+>
+    <testsuites>
+        <testsuite name="Kashflow Test Suite">
+            <file>tests/CustomerTest.php</file>
+            <file>tests/SupplierTest.php</file>
+            <file>tests/InvoiceTest.php</file>
+            <file>tests/PurchaseTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

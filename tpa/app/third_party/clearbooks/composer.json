@@ -1,0 +1,6 @@
+{
+  "name": "clearbooks/clearbooks-soap-php",
+  "autoload": {
+    "classmap": [ "src/" ]
+  }
+}

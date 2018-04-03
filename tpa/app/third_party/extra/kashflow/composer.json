@@ -1,0 +1,19 @@
+{
+    "name": "agencycore/kashflow",
+    "description": "PHP wrapper for Kashflow SOAP API",
+    "license": "MIT",
+    "version": "1.0.7",
+    "authors": [
+        {
+            "name": "Matt Davies",
+            "email": "matt@agencycore.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Kashflow\\": "src/Kashflow" }
+    },
+    "require": {
+        "agencycore/accounting": "1.0.*"
+    },
+    "minium-stability": "stable"
+}

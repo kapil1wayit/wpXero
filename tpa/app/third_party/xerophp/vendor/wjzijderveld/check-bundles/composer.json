@@ -1,0 +1,27 @@
+{
+    "name":         "wjzijderveld/check-bundles",
+    "description":  "A script which checks for bundles in your composer.json that aren't registered in your Kernel. For now, only packages with type symfony-bundle will be checked",
+    "keywords": ["composer", "script", "symfony", "bundles", "check"],
+    "type": "library",
+    "homepage": "https://github.com/wjzijderveld/CheckBundles",
+    "license": "MIT",
+    "authors": [{
+        "name": "Willem-Jan Zijderveld",
+        "role": "Developer"
+    }],
+    "require": {
+        "symfony/http-kernel": ">=2.0.0"
+    },
+    "require-dev": {
+        "composer/composer": "*"
+        },
+    "autoload": {
+        "psr-0": {"WillemJan": "lib/"}
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
