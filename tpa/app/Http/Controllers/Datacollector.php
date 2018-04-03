@@ -33,8 +33,27 @@ class Datacollector extends Controller {
 			echo 
 		}
 		*/
-		require_once(app_path('third_party/xerophp/') . 'private.php');
-		redirect(url('/') . 'redirectToXero?authenticate=1');
+		
+		$rawPayload;
+		$key = 'FfkDRfZOHo8qSR8HBu/yDDQIGxK97AyHNBsqO/VddTRoZ71TYnCB+q87Ikerp8/wNL3zcsh/AooCL1bIWa4GkA==';
+
+		$rawPayload = file_get_contents("php://input");
+		
+		$signature = base64_encode(hash_hmac('sha256', $rawPayload, $key, true));
+
+		if($signature == $_SERVER['HTTP_X_XERO_SIGNATURE'])
+		{
+			$payload = '{}';
+			header("HTTP/1.1 200");
+			echo $payload;
+		}   
+		else
+		{
+			$payload = '{}';
+			header("HTTP/1.1 401");
+			echo $payload;
+		}
+		
     }
 	
     public function redirectToXero() {
